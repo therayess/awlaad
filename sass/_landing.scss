@@ -1,0 +1,250 @@
+@import 'slider';
+
+#landing {
+    #info-bar {
+        background-color: $pink2;
+        padding: 10px;
+        text-align: center;
+        ul {
+            margin: 0;
+            li {
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    #how-it-works {
+        .steps-wrapper {
+            background: #fff;
+            padding: 45px 0;
+            text-align: center;
+            background-color: $amber;
+            p {
+                color: #fff;
+                font-size: 18px;
+                width: 80%;
+                margin: 0 auto;
+            }
+            .hiw {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                @include breakpoint('mobile') {
+                    margin-bottom: 0;
+                }
+            }
+            .hiw-img {
+                width: 100px;
+            }
+            .hiw-desc {
+                color: #fff;
+                font-size: 30px;
+            }
+            .heading {
+                color: #fff;
+            }
+        }
+    }
+
+    #discover-activities {
+        padding: 45px 0;
+        text-align: center;
+        .feature {
+            margin-top: 30px;
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            a {
+                display: block;
+            }
+            .img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                @extend .bg-cover;
+            }
+            .title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 3;
+                padding: 0 15px;
+                @extend .valign-wrapper;
+                p {
+                    margin: 0 auto;
+                    font-size: 28px;
+                    color: #fff;
+                    display: block;
+                    font-weight: bold;
+                }
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(55, 71, 79, 0.5);
+                z-index: 2;
+            }
+        }
+        .browse-all-btn {
+            margin: 30px auto 0;
+            padding: 0 50px;
+            height: 60px;
+            line-height: 60px;
+            display: inline-block;
+            outline: none;
+            border: 0;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 3px;
+            background-color: $amber;
+            color: #fff;
+        }
+    }
+
+    #plans {
+        padding: 45px 0;
+        background-color: $pink;
+        color: $pink2;
+        .heading {
+            color: #fff;
+        }
+        .plan {
+            background-color: #fff;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 15px;
+            @include breakpoint('mobile') {
+                padding: 50px 20px;
+                margin-bottom: 0;
+            }
+            .head {
+                font-size: 26px;
+                font-weight: bold;
+                color: $pink;
+            }
+            .icon {
+                margin: 25px auto;
+                border: 1px solid $pink;
+                width: 100px;
+                height: 100px;
+                @extend .valign-wrapper;
+                @include borderRadius(50%);
+                .fa {
+                    color: $pink;
+                    display: block;
+                    margin: 0 auto;
+                    font-size: 52px;
+                }
+            }
+            .body {
+                margin-bottom: 50px;
+                p {
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+            }
+            .price {
+                font-weight: bold;
+                font-size: 24px;
+                small {
+                    font-weight: bold;
+                    font-size: 22px;
+                    display: block;
+                    margin-top: 15px;
+                }
+            }
+            .pick-plan-btn {
+                margin: 50px auto 0;
+                padding: 0 50px;
+                height: 60px;
+                line-height: 60px;
+                display: inline-block;
+                outline: none;
+                border: 0;
+                font-size: 18px;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: bold;
+                letter-spacing: 3px;
+                background-color: $pink;
+                color: #fff;
+            }
+        }
+    }
+
+    #activities-map {
+        padding: 45px 0;
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+    }
+
+    #become-partner {
+        padding: 45px 0;
+        background-color: $skyblue;
+        text-align: center;
+        .heading {
+            color: #fff;
+            small {
+                color: #e3e3e3;
+            }
+        }
+        .desc {
+            color: #fff;
+            font-size: 20px;
+            width: 90%;
+            margin: 0 auto;
+            @include breakpoint('mobile') {
+                width: 50%;
+            }
+        }
+        .become-partner-btn {
+            margin: 50px auto 0;
+            padding: 0 50px;
+            height: 60px;
+            line-height: 60px;
+            display: inline-block;
+            outline: none;
+            border: 0;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 3px;
+            background-color: $bluegrey;
+            color: #fff;
+        }
+    }
+
+    .heading {
+        margin: 0 auto 30px;
+        font-weight: bold;
+        color: $bluegrey;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: center;
+        small {
+            display: block;
+            margin-top: 30px;
+            font-weight: bold;
+            text-transform: none;
+        }
+    }
+}

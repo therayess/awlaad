@@ -1,0 +1,10 @@
+body {
+    font-family: 'Josefin Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,38 @@
+footer {
+    background-color: $bluegrey;
+    color: #fff;
+    padding: 25px 0;
+    font-size: 14px;
+    text-align: center;
+    @include breakpoint('mobile') {
+        font-size: 16px;
+        text-align: left;
+    }
+    a {
+        color: #fff;
+        &:hover {
+            color: #e3e3e3;
+        }
+    }
+    ul {
+        margin: 0;
+        li {
+            @include breakpoint('mobile') {
+                margin-right: 30px;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            .fa {
+                font-size: 20px;
+            }
+        }
+    }
+    #social {
+        margin-top: 15px;
+        @include breakpoint('mobile') {
+            margin-top: 0;
+            text-align: right;
+        }
+    }
+}

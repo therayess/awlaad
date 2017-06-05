@@ -1,0 +1,125 @@
+header {
+    background: #fff;
+    padding: 15px 0;
+    .logo-wrapper {
+        position: relative;
+        top: -5px;
+        margin-right: auto;
+        .logo {
+            font-size: 34px;
+            font-weight: bold;
+            color: $amber;
+        }
+        .sep {
+            width: 1px;
+            height: 15px;
+            background-color: #ccc;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .city {
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $pink;
+            position: relative;
+            top: -2px;
+        }
+    }
+    .site-links {
+        margin-left: auto;
+        display: none;
+        @include breakpoint('mobile') {
+            display: block;
+        }
+        ul {
+            margin: 0;
+            li {
+                margin: 0 15px;
+                a {
+                    color: $bluegrey;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    #mobile-nav {
+        background: $skyblue;
+        padding: 40px 20px;
+        ul {
+            li {
+                padding: 10px;
+                border-bottom: 1px solid $blue;
+                &:last-child {
+                    border-bottom: 0;
+                }
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+        }
+        .close-nav-btn {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            width: 15px;
+            height: 15px;
+            color: $blue;
+            font-size: 20px;
+        }
+    }
+    .toggle-mobile-menu {
+        margin-left: auto; // In flex grid, this will float the item to the right
+        color: $skyblue;
+        text-decoration: none;
+        font-size: 26px;
+        display: block;
+        @include breakpoint('mobile') {
+            display: none;
+        }
+    }
+    .side-nav {
+        @include breakpoint('mobile') {
+            display: none;
+        }
+        @include transform(translateX(100%));
+        @include transition(all 0.3s ease-in-out);
+        position: fixed;
+        width: 250px;
+        right: 0;
+        top: 0;
+        margin: 0;
+        height: 100%;
+        padding-bottom: 60px;
+        background-color: #fff;
+        z-index: 999;
+        overflow-y: auto;
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        &.open {
+            @include transform(translateX(0));
+            @include boxShadow(0px 0px 20px 3px rgba(0,0,0,0.5));
+        }
+    }
+}
+
+.page-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 997;
+    will-change: opacity;
+    &.open {
+        display: block;
+    }
+}
