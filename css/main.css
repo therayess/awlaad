@@ -167,6 +167,9 @@ header {
     right: 100px;
     z-index: 5;
     display: none; }
+    @media (min-width: 767px) {
+      #slider-wrapper .slider-controls {
+        display: block; } }
     #slider-wrapper .slider-controls .control {
       color: #fff;
       text-decoration: none;
@@ -176,9 +179,6 @@ header {
       float: left;
       text-align: center;
       margin-left: 10px;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
